@@ -18,7 +18,7 @@ public class ExecutaThread {
         // Aguarda a thread t1 finalizar
         System.out.println("Thread finalizadas");*/
         ExecutorService executor = Executors.newCachedThreadPool();
-            for(int i =0; i<10;i++){
+            for(int i =0; i<5;i++){
                 executor.execute(new ThreadInterface());
             }
         System.out.println("Threads executadas");
