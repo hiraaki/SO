@@ -9,8 +9,9 @@ public class Produtor implements Runnable{
 
     @Override
     public void run() {
-        for(int i=0; i<100;i++){
-            PC.Consome();
+        for(int i=0; i<Integer.MAX_VALUE;i++){
+                PC.produz(i);
+            //System.out.println("p"+i);
         }
     }
 }

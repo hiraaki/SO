@@ -5,6 +5,7 @@ import java.util.concurrent.Executors;
 
 public class ExecutaThread {
     public static void main(String args[]) throws InterruptedException{
+        ThreadInterface thread= new ThreadInterface();
         /*Thread t1;
         Thread t2;
         t1= new Thread(new ThreadInterface());
@@ -18,9 +19,11 @@ public class ExecutaThread {
         // Aguarda a thread t1 finalizar
         System.out.println("Thread finalizadas");*/
         ExecutorService executor = Executors.newCachedThreadPool();
-            for(int i =0; i<5;i++){
-                executor.execute(new ThreadInterface());
-            }
+//            for(int i =0; i<2;i++){
+//                executor.execute(new ThreadInterface());
+//            }
+        executor.execute(new threadA(thread));
+        executor.execute(new threadB(thread));
         System.out.println("Threads executadas");
         executor.shutdown();
     }

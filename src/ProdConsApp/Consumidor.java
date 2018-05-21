@@ -9,8 +9,9 @@ public class Consumidor implements Runnable {
 
     @Override
     public void run() {
-        for(int i=0; i<100;i++){
-            PC.produz(i);
+        for(int i=0; i<Integer.MAX_VALUE;i++){
+            PC.Consome();
+            //System.out.println("c"+i);
         }
     }
 }
